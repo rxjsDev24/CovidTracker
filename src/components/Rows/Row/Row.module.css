@@ -1,0 +1,23 @@
+.Row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Col {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px 8px;
+    box-sizing: border-box;
+    color: black;
+    width: 20%;
+    transition: all 0.2s ease-in-out;
+}
+
+.Row:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: gray;
+    box-shadow: 8px 4px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    font-weight: bold;
+}

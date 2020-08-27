@@ -1,7 +1,0 @@
-.Left{
-    display: flex;
-    height:100vh;
-    width: 48%;
-    border: 1px solid black;
-    flex-direction: column;
-}

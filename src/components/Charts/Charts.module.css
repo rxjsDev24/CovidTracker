@@ -1,0 +1,7 @@
+.Charts {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    height: auto;
+}

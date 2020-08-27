@@ -1,0 +1,11 @@
+.Pie {
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid;
+}
+
+.Chart {
+    min-width: 100%;
+    padding: 0;
+}

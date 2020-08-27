@@ -1,7 +1,42 @@
 .Main {
     display: flex;
     width: 100%;
-    justify-content: space-between;
     padding: 15px;
     box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Left {
+    display: flex;
+    /* height: 100vh; */
+    width: 80%;
+    border: 1px solid black;
+    flex-direction: column;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.Right {
+    display: flex;
+    height: 100vh;
+    width: 80%;
+    border: 1px solid black;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 1300px) {
+    .Main {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .Left {
+        width: 48%;
+    }
+    .Right {
+        width: 48%;
+    }
 }
