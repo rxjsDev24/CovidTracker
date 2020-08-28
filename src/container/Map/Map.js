@@ -22,13 +22,6 @@ class Map extends Component {
         // Create map polygon series
         let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
-        polygonSeries.events.on("out", out);
-        const myfunc = this.props.unhover;
-        function out(ev) {
-            console.log('check')
-            ev.target.mapPolygons.each(myfunc);
-        }
-
         //HeatMap rules
         polygonSeries.heatRules.push({
             property: "fill",
@@ -50,6 +43,10 @@ class Map extends Component {
 
         polygonTemplate.events.on("over", (ev) => {
             this.props.hover(ev.target.dataItem.dataContext.code);
+        });
+
+        polygonTemplate.events.on("out", (ev) => {
+            this.props.unhover();
         });
 
         this.chart = chart;
