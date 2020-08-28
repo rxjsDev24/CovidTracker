@@ -3,10 +3,9 @@ import classes from './Rows.module.css';
 import Row from './Row/Row';
 
 const Rows = (props) => {
-    console.log(props.data)
     let elements = [];
     for (let state in props.data) {
-        if (state === 'TT' || state==='UN')
+        if (state === 'TT' || state === 'UN')
             continue;
         elements.push(props.data[state]);
     }
@@ -19,9 +18,11 @@ const Rows = (props) => {
                 <div className={classes.Col}><p>Recovered</p></div>
                 <div className={classes.Col}><p>Deceased</p></div>
             </div>
-            {elements.map(element => {
-                return <Row data={element} />
-            })}
+            <div className={classes.State}>
+                {elements.map(element => {
+                    return <Row key={element.code} data={element} hover={props.hover} unhover={props.unhover} />
+                })}
+            </div>
         </div>
     )
 }

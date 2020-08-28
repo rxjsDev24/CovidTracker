@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import * as am4core from "@amcharts/amcharts4/core";
-// import * as am4charts from "@amcharts/amcharts4/charts";
 import * as am4maps from "@amcharts/amcharts4/maps"
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+import am4themes_dataviz from "@amcharts/amcharts4/themes/dataviz";
 
 am4core.useTheme(am4themes_animated);
-
+am4core.useTheme(am4themes_dataviz);
 class Map extends Component {
     componentDidMount() {
-        let chart = am4core.create("chartdiv", am4maps.MapChart);
 
-        chart.paddingRight = 20;
+
+
+        let chart = am4core.create("chartdiv", am4maps.MapChart);
 
         chart.geodataSource.url = "https://www.amcharts.com/lib/4/geodata/json/india2020High.json"
 
@@ -20,28 +21,26 @@ class Map extends Component {
         // Create map polygon series
         let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
+        //HeatMap rules
+        polygonSeries.heatRules.push({
+            property: "fill",
+            target: polygonSeries.mapPolygons.template,
+            min: chart.colors.getIndex(1).brighten(1),
+            max: chart.colors.getIndex(1).brighten(-0.3)
+        });
+
         // Make map load polygon (like country names) data from GeoJSON
         polygonSeries.useGeodata = true;
-        polygonSeries.data = [
-            {
-                id: "IN-DL",
-                value: 207
-            },
-            {
-                id: "IN-LK",
-                value: 500
-            }
-        ]
+        polygonSeries.data = this.props.data;
 
         let polygonTemplate = polygonSeries.mapPolygons.template;
         polygonTemplate.tooltipText = "{name}";
-        polygonTemplate.fill = am4core.color("#74B266");
 
-        polygonTemplate.tooltipText = "{name}: {id}";
+        polygonTemplate.tooltipText = "{name}: {value}";
 
         // Create hover state and set alternative fill color
         let hs = polygonTemplate.states.create("hover");
-        hs.properties.fill = am4core.color("#367B25");
+        hs.properties.fill = am4core.color("#ff073fde");
 
         polygonTemplate.events.on("hit", function (ev) {
             console.log(`${ev.target.dataItem.dataContext.id} : ${ev.target.dataItem.dataContext.value}`);

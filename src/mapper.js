@@ -7,14 +7,23 @@ export const mapData = (data) => {
         for (let state in data) {
             if (state === 'date' || state === 'status')
                 continue;
+
             let code = state.toUpperCase()
             states[code] = {
                 ...states[code],
                 [status]: data[state]
             }
+            states = {
+                ...states,
+                [code]: {
+                    ...states[code],
+                    [status]: data[state]
+                }
+            }
         }
         parsedData[date] = states
     })
+    console.log(parsedData)
     return parsedData;
 }
 
@@ -37,7 +46,28 @@ export const mapTotalData = (data) => {
     return parsedData;
 }
 
-
+export const setMapData = (data) => {
+    let map = [];
+    let code = '';
+    for (let state in data) {
+        if (data[state].code === 'TT' || data[state].code === 'UN') {
+            continue;
+        }
+        if (data[state].code === 'LA') {
+            code = 'LK'
+        } else if (data[state].code === 'DN') {
+            code = 'DNDD'
+        } else {
+            code = data[state].code
+        }
+        map.push({
+            id: 'IN-' + code,
+            value: data[state].Confirmed,
+            code: code
+        })
+    }
+    return map;
+}
 
 // const setActiveStatus = (data) => {
 //     for (let date in data) {

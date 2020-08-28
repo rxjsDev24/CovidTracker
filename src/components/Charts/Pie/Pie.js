@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './Pie.module.css'
 
 const Pie = (props) => {
-    
+
     let active = +props.data.Active;
     let deaths = +props.data.Deceased;
     let recover = +props.data.Recovered;
@@ -24,8 +24,8 @@ const Pie = (props) => {
 
                 options={{
                     // Just add this option
-                    chartArea: { left: 5 },
-                    legend: { position: 'right', textStyle: { fontSize: 8 } },
+                    // chartArea: { left: auto },
+                    legend: { position: 'bottom', textStyle: { fontSize: 8 } },
                     pieHole: 0.7,
                     colors: ['#63D1F4', '#9FB6CD', '#00c400'],
                     pieSliceText: 'none'

@@ -1,0 +1,8 @@
+.Boxes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height:15%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}

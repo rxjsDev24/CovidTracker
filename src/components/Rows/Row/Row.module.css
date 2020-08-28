@@ -10,7 +10,7 @@
     padding: 8px 8px;
     box-sizing: border-box;
     color: black;
-    width: 20%;
+    width: calc(100% / 5);
     transition: all 0.2s ease-in-out;
 }
 

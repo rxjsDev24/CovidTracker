@@ -10,19 +10,18 @@
 
 .Left {
     display: flex;
-    /* height: 100vh; */
     width: 80%;
-    border: 1px solid black;
     flex-direction: column;
     padding: 0 15px;
     box-sizing: border-box;
+    margin-bottom: 30px;
 }
 
 .Right {
     display: flex;
-    height: 100vh;
     width: 80%;
-    border: 1px solid black;
+    box-sizing: border-box;
+    padding-top: 20px;
     flex-direction: column;
     background-color: white;
     border-radius: 20px;
@@ -39,4 +38,32 @@
     .Right {
         width: 48%;
     }
+}
+
+.Center {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 50px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 20px 0;
+    align-items: flex-start;
+}
+
+.State {
+    color: #ff073fde;
+}
+
+.Update {
+    color: #28a745f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.Map {
+    padding: 15px;
+    align-items: center;
+    display: flex;
 }
