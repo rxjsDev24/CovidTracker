@@ -96,8 +96,8 @@ class Main extends Component {
                                 <h2>{this.state.todayData.name === 'Total' ? 'INDIA' : this.state.todayData.name}</h2>
                             </div>
                             <div className={classes.Update}>
-                                <h2>LAST UPDATED ON</h2>
-                                <h4>{this.state.todayData.lastUpdated}</h4>
+                                <h5>LAST UPDATED ON</h5>
+                                <span>{this.state.todayData.lastUpdated}</span>
                             </div>
                         </div>
                         <div className={classes.Map}>

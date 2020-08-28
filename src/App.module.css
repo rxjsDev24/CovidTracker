@@ -4,8 +4,9 @@
     background-color: #dce7f3;
     flex-direction: column;
 }
-.Head{
-    display:flex;
+
+.Head {
+    display: flex;
     flex-direction: column;
     width: 100%;
     padding: 10px 0 0 20px;
