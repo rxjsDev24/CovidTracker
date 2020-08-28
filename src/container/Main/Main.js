@@ -30,7 +30,7 @@ class Main extends Component {
                     let element = []
                     for (let date in parsedData) {
                         element.push([
-                            date.substring(0,date.length-5),
+                            date.substring(0, date.length - 5),
                             +parsedData[date].TT.Confirmed,
                             +parsedData[date].TT.Recovered,
                             +parsedData[date].TT.Deceased
@@ -57,7 +57,7 @@ class Main extends Component {
         let data = this.state.lastWeek;
         for (let date in data) {
             element.push([
-                date.substring(0,date.length-5),
+                date.substring(0, date.length - 5),
                 +data[date][code].Confirmed,
                 +data[date][code].Recovered,
                 +data[date][code].Deceased
@@ -71,7 +71,7 @@ class Main extends Component {
         let data = this.state.lastWeek;
         for (let date in data) {
             element.push([
-                date.substring(0,date.length-5),
+                date.substring(0, date.length - 5),
                 +data[date].TT.Confirmed,
                 +data[date].TT.Recovered,
                 +data[date].TT.Deceased
@@ -101,7 +101,7 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className={classes.Map}>
-                            <Map data={this.state.mapData} />
+                            <Map data={this.state.mapData} hover={this.stateDataHandler} unhover={this.mouseLeaveHandler} />
                         </div>
                     </div>
                 </div>

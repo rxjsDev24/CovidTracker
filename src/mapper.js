@@ -23,7 +23,6 @@ export const mapData = (data) => {
         }
         parsedData[date] = states
     })
-    console.log(parsedData)
     return parsedData;
 }
 
@@ -49,21 +48,25 @@ export const mapTotalData = (data) => {
 export const setMapData = (data) => {
     let map = [];
     let code = '';
+    let id='';
     for (let state in data) {
         if (data[state].code === 'TT' || data[state].code === 'UN') {
             continue;
         }
         if (data[state].code === 'LA') {
-            code = 'LK'
+            code = 'LK';
+            id='LA'
         } else if (data[state].code === 'DN') {
-            code = 'DNDD'
+            code = 'DNDD';
+            id='DN'
         } else {
-            code = data[state].code
+            code = data[state].code;
+            id=code;
         }
         map.push({
             id: 'IN-' + code,
             value: data[state].Confirmed,
-            code: code
+            code: id
         })
     }
     return map;
