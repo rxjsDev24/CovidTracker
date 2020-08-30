@@ -12,3 +12,10 @@
 .h2 {
     text-transform: capitalize;
 }
+
+@media screen and (max-width: 450px) {
+    .Box {
+        width: calc(100% / 2.2);
+        margin: 0 10px 10px 0;
+    }
+}

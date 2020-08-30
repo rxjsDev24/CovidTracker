@@ -7,23 +7,42 @@
     border-radius: 20px;
     margin-top: 20px;
     padding: 10px 0 0 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .Row {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .Col {
     display: flex;
-    justify-content: flex-start;
-    padding: 8px 8px;
-    box-sizing: border-box;
+    padding: 5px 5px;
     color: #daa31b;
-    width: calc(100% / 5);
-    font-size: 20px;
-    font-weight: bolder;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 20%;
+    max-width: 20%;
+    justify-content: flex-start;
+}
+
+.Rows::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .Rows {
+        overflow-x: overlay;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .Col {
+        font-size: 20px;
+        font-weight: bolder;
+    }
 }
 
 .State {
@@ -31,6 +50,11 @@
     display: flex;
     flex-direction: column;
     overflow-y: overlay;
+    overflow-x: unset;
+}
+
+.Rows::-webkit-scrollbar {
+    display: none;
 }
 
 .State::-webkit-scrollbar {

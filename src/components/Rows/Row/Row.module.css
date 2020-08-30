@@ -1,17 +1,25 @@
 .Row {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    /* overflow-x: inherit; */
 }
 
 .Col {
     display: flex;
     justify-content: flex-start;
-    padding: 8px 8px;
-    box-sizing: border-box;
+    padding: 5px 5px;
+    font-size: 11px;
     color: black;
-    width: calc(100% / 5);
+    min-width: 20%;
+    max-width: 20%;
     transition: all 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 450px) {
+    .Col {
+        font-size: 16px;
+    }
 }
 
 .Row:hover {

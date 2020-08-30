@@ -3,6 +3,7 @@
     width: 100%;
     background-color: #dce7f3;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .Head {
@@ -10,4 +11,22 @@
     flex-direction: column;
     width: 100%;
     padding: 10px 0 0 20px;
+    box-sizing: border-box; 
+}
+
+.Head h1 {
+    font-size: 20px;
+}
+
+.Head p {
+    font-size: 10px;
+}
+
+@media screen and (min-width: 450px) {
+    .Head h1 {
+        font-size: 30px;
+    }
+    .Head p {
+        font-size: 15px;
+    }
 }

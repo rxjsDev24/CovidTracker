@@ -1,7 +1,7 @@
 .Main {
     display: flex;
     width: 100%;
-    padding: 15px;
+    padding: 10px 5px 0 5px;
     box-sizing: border-box;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,34 +10,21 @@
 
 .Left {
     display: flex;
-    width: 80%;
+    width: 100%;
     flex-direction: column;
-    padding: 0 15px;
+    padding: 0 5px;
     box-sizing: border-box;
     margin-bottom: 30px;
 }
 
 .Right {
     display: flex;
-    width: 80%;
+    width: 100%;
     box-sizing: border-box;
     padding-top: 20px;
     flex-direction: column;
     background-color: white;
     border-radius: 20px;
-}
-
-@media screen and (min-width: 1300px) {
-    .Main {
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    .Left {
-        width: 48%;
-    }
-    .Right {
-        width: 48%;
-    }
 }
 
 .Center {
@@ -66,4 +53,32 @@
     padding: 15px;
     align-items: center;
     display: flex;
+}
+
+@media screen and (min-width: 450px) {
+    .Main {
+        padding: 15px;
+    }
+    .Left {
+        width: 80%;
+        padding: 0 15px;
+    }
+    .Right {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .Main {
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .Left {
+        width: 48%;
+        padding: 0 15px;
+    }
+    .Right {
+        width: 48%;
+    }
 }
