@@ -22,5 +22,4 @@ Click [here](https://github.com/AIEnthusias-t/CovidTracker) then download the .z
 > npm install
 > npm start
 ```
-
-
+link - https://www.covid19india.org/
