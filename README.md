@@ -4,6 +4,7 @@ A Covid Tracker  WebApp based purely on React.
 
 ### Getting Started
 There are two methods for getting started with this repo.
+These are very important steps and needed to be handled with care
 
 #### Familiar with Git?
 Checkout this repo, install dependencies, then start the gulp process with the following:
