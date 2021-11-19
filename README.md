@@ -1,6 +1,5 @@
 # Covid Tracker App
 A Covid Tracker  WebApp based purely on React.
-[Live Website covidtracker-98900.web.app](https://covidtracker-98900.web.app/)
 
 ### Getting Started
 There are two methods for getting started with this repo.
