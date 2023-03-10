@@ -1,6 +1,9 @@
 # Covid Tracker App
 A Covid Tracker  WebApp based purely on React.
 
+#### Note:
+Few api's deprecated,hence data issues
+
 ### Getting Started
 There are two methods for getting started with this repo.
 
